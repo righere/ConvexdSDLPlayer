@@ -1,0 +1,4 @@
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/src/video/SDL_egl.c:608:9: warning: implicit declaration of function 'ANativeWindow_setBuffersGeometry' is invalid in C99 [-Wimplicit-function-declaration]
+        ANativeWindow_setBuffersGeometry(nw, 0, 0, format);
+        ^
+1 warning generated.
