@@ -30,27 +30,16 @@
   /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_gesture.h \
   /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_touch.h \
   /home/righere/Android/ConvexdPlayer/app/src/main/jni/src/render/SDL_yuv_sw_c.h \
-  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL.h \
-  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_main.h \
-  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_assert.h \
-  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_atomic.h \
-  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_audio.h \
-  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_mutex.h \
-  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_thread.h \
-  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_clipboard.h \
-  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_cpuinfo.h \
-  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_filesystem.h \
-  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_haptic.h \
-  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_hints.h \
-  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_loadso.h \
-  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_log.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/src/video/SDL_sysvideo.h \
   /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_messagebox.h \
-  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_power.h \
-  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_system.h \
-  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_timer.h \
-  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_version.h \
-  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/libavcodec/avcodec.h \
-  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/libavutil/samplefmt.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_shape.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_thread.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_atomic.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_mutex.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/src/thread/SDL_thread_c.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/src/thread/pthread/SDL_systhread_c.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/src/thread/../SDL_error_c.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/libavutil/imgutils.h \
   /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/libavutil/avutil.h \
   /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/libavutil/common.h \
   /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/libavutil/attributes.h \
@@ -64,6 +53,24 @@
   /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/libavutil/intfloat.h \
   /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/libavutil/log.h \
   /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/libavutil/pixfmt.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/libavutil/pixdesc.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_main.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_assert.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_audio.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_clipboard.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_cpuinfo.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_filesystem.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_haptic.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_hints.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_loadso.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_log.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_power.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_system.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_timer.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_version.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/libavcodec/avcodec.h \
+  /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/libavutil/samplefmt.h \
   /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/libavutil/buffer.h \
   /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/libavutil/cpu.h \
   /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/libavutil/channel_layout.h \
@@ -138,47 +145,25 @@
 
 /home/righere/Android/ConvexdPlayer/app/src/main/jni/src/render/SDL_yuv_sw_c.h:
 
-/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL.h:
-
-/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_main.h:
-
-/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_assert.h:
-
-/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_atomic.h:
-
-/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_audio.h:
-
-/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_mutex.h:
-
-/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_thread.h:
-
-/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_clipboard.h:
-
-/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_cpuinfo.h:
-
-/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_filesystem.h:
-
-/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_haptic.h:
-
-/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_hints.h:
-
-/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_loadso.h:
-
-/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_log.h:
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/src/video/SDL_sysvideo.h:
 
 /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_messagebox.h:
 
-/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_power.h:
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_shape.h:
 
-/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_system.h:
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_thread.h:
 
-/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_timer.h:
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_atomic.h:
 
-/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_version.h:
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_mutex.h:
 
-/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/libavcodec/avcodec.h:
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/src/thread/SDL_thread_c.h:
 
-/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/libavutil/samplefmt.h:
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/src/thread/pthread/SDL_systhread_c.h:
+
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/src/thread/../SDL_error_c.h:
+
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/libavutil/imgutils.h:
 
 /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/libavutil/avutil.h:
 
@@ -205,6 +190,42 @@
 /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/libavutil/log.h:
 
 /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/libavutil/pixfmt.h:
+
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/libavutil/pixdesc.h:
+
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL.h:
+
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_main.h:
+
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_assert.h:
+
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_audio.h:
+
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_clipboard.h:
+
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_cpuinfo.h:
+
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_filesystem.h:
+
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_haptic.h:
+
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_hints.h:
+
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_loadso.h:
+
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_log.h:
+
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_power.h:
+
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_system.h:
+
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_timer.h:
+
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/SDL_version.h:
+
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/libavcodec/avcodec.h:
+
+/home/righere/Android/ConvexdPlayer/app/src/main/jni/include/libavutil/samplefmt.h:
 
 /home/righere/Android/ConvexdPlayer/app/src/main/jni/include/libavutil/buffer.h:
 

@@ -23,25 +23,26 @@ JNIEXPORT int JNICALL Java_com_righere_convexdplayer_sdl_SDLActivity_nativeInit(
 JNIEXPORT int JNICALL Java_com_righere_convexdplayer_sdl_SDLActivity_nativeInit(JNIEnv* env, jclass cls, jstring string)
 {
     int i;
-    int argc = 2;
+    int argc = 3;
     int status;
-    int len;
-    char **argv = NULL;
+//    int len;
+    char* argv[3];
 
     /* This interface could expand with ABI negotiation, callbacks, etc. */
     SDL_Android_Init(env, cls);
 
     SDL_SetMainReady();
 
-    const char* utf;
-    if(string != NULL){
-        utf = (*env)->GetStringUTFChars(env,string,0);
+    argv[0] = SDL_strdup("app_process");
+    const char* utf = NULL;
+    if(string){
+        utf = (*env)->GetStringUTFChars(env, string, 0);
         if(utf){
             argv[1] = SDL_strdup(utf);
-            (*env)->ReleaseStringUTFChars(env,string,utf);
+            (*env)->ReleaseStringUTFChars(env, string, utf);
         }
-        (*env)->DeleteLocalRef(env,string);
     }
+    argv[2] = NULL;
 //    if(!arg){
 //        arg = SDL_strdup("");
 //    }
@@ -86,7 +87,7 @@ JNIEXPORT int JNICALL Java_com_righere_convexdplayer_sdl_SDLActivity_nativeInit(
 
     /* Release the arguments. */
 
-    for (i = 0; i < argc; ++i) {
+    for (i = 0; i < argc; i++) {
 
         SDL_free(argv[i]);
     }

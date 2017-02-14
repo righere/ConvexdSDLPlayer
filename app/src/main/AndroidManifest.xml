@@ -23,7 +23,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".sdl.SDLActivity"
-            android:configChanges="keyboardHidden|orientation">
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoTitle">
 
         </activity>
 

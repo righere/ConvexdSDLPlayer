@@ -476,7 +476,7 @@ public class SDLActivity extends AppCompatActivity {
     }
 
     // C functions we call
-    public static native int nativeInit(String arguments);
+    public static native int nativeInit(String string);
     public static native void nativeLowMemory();
     public static native void nativeQuit();
     public static native void nativePause();

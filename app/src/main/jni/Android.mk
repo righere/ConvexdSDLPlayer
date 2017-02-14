@@ -175,12 +175,14 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := SDL2main
 
-LOCAL_C_INCLUDES = $(LOCAL_PATH)/include
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/include \
+
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_C_INCLUDES)
 
 # Add your application source files here...
 
 LOCAL_SRC_FILES := $(LOCAL_PATH)/src/main/android/SDL_android_main.c \
-	$(LOCAL_PATH)/convexd_native_render.c
+	$(LOCAL_PATH)/renderwiththread.c
 
 LOCAL_SHARED_LIBRARIES := SDL2 avcodec avfilter avformat avutil  swresample swscale
 

@@ -30,8 +30,12 @@ public class VideoProvider implements AbstractProvider{
             Uri uri = MediaStore.Video.Media.EXTERNAL_CONTENT_URI;
             String selection = MediaStore.Video.Media.DATA + " like?";
             String[] selectArgs = new String[]{"%convexd%"};
+            //指定文件夹
             Cursor cursor = context.getContentResolver().query(
                     uri,null,selection,selectArgs, MediaStore.Video.Media.DEFAULT_SORT_ORDER);
+            //sd根目录
+//            Cursor cursor = context.getContentResolver().query(
+//                    uri,null,null,null, MediaStore.Video.Media.DEFAULT_SORT_ORDER);
             Log.i(TAG, "getList: " + MediaStore.Video.Media.EXTERNAL_CONTENT_URI.toString());
             if(cursor != null){
                 list = new ArrayList<VideoItem>();

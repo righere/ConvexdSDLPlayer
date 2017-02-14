@@ -296,7 +296,7 @@ typedef struct AVFrame {
     /**
      * for some private data of the user
      */
-    void *opaque;
+    double opaque;
 
 #if FF_API_ERROR_FRAME
     /**
