@@ -70,6 +70,7 @@ int main(int argc, char** argv)
     if(argc < 2)
     {
         LOGE("no media input!");
+        return -1;
     }
     //获取文件名
     const char* mediaUri = (const char *) argv[1];
@@ -122,15 +123,12 @@ int main(int argc, char** argv)
     //transform
     if(avcodec_parameters_to_context(pCodecCtx,avCodecParameters) < 0){
         LOGE("copy the codec parameters to context fail!");
+        return -1;
     }
 //    else{
 //        LOGI("%d",pCodecCtx->width);
 //        LOGI("%d",pCodecCtx->height);
 //        LOGI("pix_format code is %d",pCodecCtx->pix_fmt);
-//    }
-//    if(pCodec==NULL) {
-//        LOGE("Unable to find codec!\n");
-//        return -1; // Codec not found
 //    }
     //打开codec
     int errorCode = avcodec_open2(pCodecCtx, pCodec, NULL);
@@ -229,7 +227,7 @@ int main(int argc, char** argv)
                                          pFrame_out->data[1],pFrame_out->linesize[1],
                                          pFrame_out->data[2],pFrame_out->linesize[2]);
 #else
-                     SDL_UpdateTexture(sdlTexture,NULL,pFrame_out->data[0],pCodecCtx->width*4);
+                     SDL_UpdateTexture(sdlTexture,NULL,pFrame_out->data[0],pCodecCtx->width*4);  //4通道：pitch = width×4
 #endif
 
                     SDL_RenderClear(renderer);
