@@ -2,10 +2,8 @@
 // Created by righere on 16-11-22.
 //
 #include "stdio.h"
-#include "pthread.h"
 
 #ifdef __ANDROID__
-
 #include <jni.h>
 #include <android/log.h>
 //使用NDK的log
@@ -16,22 +14,16 @@
 #define LOGI(format, ...) printf("INFO: " format "\n",###__VA_ARGS__)
 #endif
 
-
-
 #include <src/render/SDL_sysrender.h>
 #include <src/video/SDL_sysvideo.h>
-#include <src/thread/SDL_thread_c.h>
 #include <libavutil/imgutils.h>
-
 #include "SDL.h"
-#include "SDL_log.h"
-#include "SDL_thread.h"
+
 
 #include "libavcodec/avcodec.h"
 #include "libavfilter/avfilter.h"
 #include "libavformat/avformat.h"
 #include "libswscale/swscale.h"
-
 
 //屏幕参数
 int SCREEN_W = 1920;
@@ -51,8 +43,6 @@ int main(int argc, char** argv)
     AVCodec         *pCodec;
     AVFrame         *pFrame, *pFrame_out;
     AVPacket        *packet;
-    int             frameFinished;
-    float           aspect_ratio;
 
     //size buffer
     uint8_t *out_buffer;
@@ -64,8 +54,6 @@ int main(int argc, char** argv)
     SDL_Texture    *sdlTexture;
     SDL_Rect sdlRect;
     SDL_Renderer   *renderer;
-    SDL_Thread  *sdl_thread;
-    SDL_Event       event;
 
     if(argc < 2)
     {
@@ -125,11 +113,6 @@ int main(int argc, char** argv)
         LOGE("copy the codec parameters to context fail!");
         return -1;
     }
-//    else{
-//        LOGI("%d",pCodecCtx->width);
-//        LOGI("%d",pCodecCtx->height);
-//        LOGI("pix_format code is %d",pCodecCtx->pix_fmt);
-//    }
     //打开codec
     int errorCode = avcodec_open2(pCodecCtx, pCodec, NULL);
     if(errorCode < 0){
@@ -147,8 +130,6 @@ int main(int argc, char** argv)
 
     //decode packet
     packet = av_packet_alloc();
-
-//    packet = av_malloc(sizeof(AVPacket));
 
     pFrame_out = av_frame_alloc();
 #if BUFFER_FMT_YUV
@@ -200,9 +181,6 @@ int main(int argc, char** argv)
 //    sdlRect.w = SCREEN_W;
 //    sdlRect.h = SCREEN_H;
 
-    //SDL Thread,use for adding event
-    //sdl_thread = SDL_CreateThread(sfp_refresh_thread,NULL,NULL);
-
     // Read frames
     while (av_read_frame(pFormatCtx, packet) >= 0) {
         // Is this a packet from the video stream?
@@ -212,7 +190,7 @@ int main(int argc, char** argv)
             int getPacketCode = avcodec_send_packet(pCodecCtx, packet);
             if(getPacketCode == 0) {
                 int getFrameCode = avcodec_receive_frame(pCodecCtx, pFrame);
-//                LOGI("%d", getFrameCode);
+                LOGI("%d", getFrameCode);
                 // Did we get a video frame?
                 if (getFrameCode == 0) {
                     LOGI("%s", "Got Video Frame Succeed");

@@ -75,27 +75,6 @@ include $(PREBUILT_SHARED_LIBRARY)
 
 ###########################
 #
-# FFmpeg custom shared library
-#
-###########################
-
-#include $(CLEAR_VARS)
-#
-#LOCAL_MODULE:= FFmpegcodec
-#
-#LOCAL_SRC_FILES:= $(LOCAL_PATH)/ffmpeg-jni.cpp
-#
-#LOCAL_C_INCLUDES += $(LOCAL_PATH)/include
-#
-#LOCAL_LDLIBS := -llog  -lz
-#
-#LOCAL_SHARED_LIBRARIES := avcodec avfilter avformat avutil  swresample swscale
-#
-#include $(BUILD_SHARED_LIBRARY)
-
-
-###########################
-#
 # SDL shared library
 #
 ###########################

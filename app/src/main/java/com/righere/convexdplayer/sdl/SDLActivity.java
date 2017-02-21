@@ -159,7 +159,6 @@ public class SDLActivity extends AppCompatActivity {
         mHasFocus = true;
     }
 
-
     // Setup
     @Override
     public void onCreate(Bundle savedInstanceState) {

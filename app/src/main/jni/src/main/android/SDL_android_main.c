@@ -43,12 +43,10 @@ JNIEXPORT int JNICALL Java_com_righere_convexdplayer_sdl_SDLActivity_nativeInit(
         }
     }
     argv[2] = NULL;
+
 //    if(!arg){
 //        arg = SDL_strdup("");
 //    }
-
-
-
 //    /* Prepare the arguments. */
 //
 //    //将java中的string对象类型转换成c++中的char*
@@ -79,7 +77,7 @@ JNIEXPORT int JNICALL Java_com_righere_convexdplayer_sdl_SDLActivity_nativeInit(
 //    }
 //    argv[argc] = NULL;
 
-    //argv[0] = "app_progress"  argv[1] = array  argv[2] = NULL
+    //argv[0] = "app_progress"  argv[1] = string  argv[2] = NULL
 
     /* Run the application. */
 
