@@ -10,8 +10,8 @@
 #define LOGE(...) __android_log_print(ANDROID_LOG_ERROR,"ERROR: ", __VA_ARGS__)
 #define LOGI(...) __android_log_print(ANDROID_LOG_INFO,"INFO: ", __VA_ARGS__)
 #else
-#define LOGE(format, ...) printf("ERROR: " format "\n",###__VA_ARGS__)
-#define LOGI(format, ...) printf("INFO: " format "\n",###__VA_ARGS__)
+#define LOGE(format, ...) printf("ERROR: " format "\n",##__VA_ARGS__)
+#define LOGI(format, ...) printf("INFO: " format "\n",##__VA_ARGS__)
 #endif
 
 #include <src/render/SDL_sysrender.h>
@@ -54,6 +54,7 @@ int main(int argc, char** argv)
     SDL_Texture    *sdlTexture;
     SDL_Rect sdlRect;
     SDL_Renderer   *renderer;
+    SDL_Event     event;
 
     if(argc < 2)
     {
@@ -199,21 +200,30 @@ int main(int argc, char** argv)
                     sws_scale(img_convert_ctx, (const uint8_t *const *) pFrame->data,
                               pFrame->linesize, 0, pFrame->height,
                               pFrame_out->data, pFrame_out->linesize);
-#if (BUFFER_FMT_YUV == 1)
+                    #if (BUFFER_FMT_YUV == 1)
 
                     SDL_UpdateYUVTexture(sdlTexture, NULL, pFrame_out->data[0], pFrame_out->linesize[0],
                                          pFrame_out->data[1],pFrame_out->linesize[1],
                                          pFrame_out->data[2],pFrame_out->linesize[2]);
-#else
+                    #else
                      SDL_UpdateTexture(sdlTexture,NULL,pFrame_out->data[0],pCodecCtx->width*4);  //4通道：pitch = width×4
-#endif
-
+                    #endif
                     SDL_RenderClear(renderer);
                     SDL_RenderCopy(renderer, sdlTexture, NULL, NULL);
                     SDL_RenderPresent(renderer);
-
-                    //Delay 40ms
-                    SDL_Delay(20);
+                    //设置每秒25帧，1000/25 = 40
+                    SDL_Delay(40);
+                    SDL_PollEvent(&event);
+                    switch (event.type) {
+                        case SDL_QUIT:
+                            SDL_Quit();
+                            exit(0);
+                        case SDL_KEYDOWN:
+                            SDL_Quit();
+                            exit(0);
+                        default:
+                            break;
+                    }
                 }
                 else if (getFrameCode == AVERROR(EAGAIN)) {
                     LOGE("%s", "Frame is not available right now,please try another input");
@@ -237,7 +247,7 @@ int main(int argc, char** argv)
     av_frame_free(&pFrame);
     avcodec_close(pCodecCtx);
     avformat_close_input(&pFormatCtx);
-    SDL_Quit();
+ //   SDL_Quit();
     return 0;
 }
 
